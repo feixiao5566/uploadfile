@@ -13,7 +13,7 @@ struct FileInfo
 	unsigned int writed;
 	FILE *fp;
 	int type;
-	FileInfo():file_size(0),writed(0),fp(0),type(0)
+	FileInfo():file_size(0),writed(0),fp(0),type(0)  //构造函数初始化列表
 	{
 	}
 	~FileInfo()

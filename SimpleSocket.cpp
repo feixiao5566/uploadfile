@@ -1,6 +1,7 @@
 #include <string.h>
 #include "SimpleSocket.h"
 #define RECV_BUFFER_SIZE (32*1024)
+//看起来就是用socket写了个连接
 bool CSimpleSocket::Connect(const char* host, unsigned short port)
 {
 	struct sockaddr_in addr;
@@ -97,7 +98,7 @@ void CSimpleSocket::Read(std::string &buf)
 const char* sockerr::errstr () const
 {
 	static char buff[1024];
-	sprintf(buff, "No.%d, ",m_err);
+	sprintf(buff, "No.%d, ",m_err);//信息标号
 	LPVOID lpMsgBuf;
 	FormatMessage( 
 		FORMAT_MESSAGE_ALLOCATE_BUFFER | 

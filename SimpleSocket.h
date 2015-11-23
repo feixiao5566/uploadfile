@@ -17,10 +17,10 @@ public:
 class CSimpleSocket
 {
 public:
-	CSimpleSocket():m_Socket(INVALID_SOCKET)
+	CSimpleSocket():m_Socket(INVALID_SOCKET)//socket通信
 	{
 	}
-	bool Connect(const char* host, unsigned short port);
+	bool Connect(const char* host, unsigned short port);//连接 主机端口
 	bool Init();
 	void Close();
 	void Send(const char* data,int len);
